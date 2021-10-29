@@ -15,6 +15,7 @@ export const Container = styled.div`
 
   section.offer-by-address {
     margin-top: 4rem;
+    margin-bottom: 4rem;
 
     h2 {
       font-size: var(--title-size);
@@ -23,16 +24,18 @@ export const Container = styled.div`
     }
     
     button {
-      background: var(--orange);
+      background: var(--yellow);
       color: var(--text-body);
       font-size: var(--label-size);
       font-weight: 700;
       height: 3.125rem;
       width: 11.25rem;
       border: none;
-      border-radius: 0.625rem;
-      margin-top: 3rem;
-      margin-bottom: 5rem;
+      border-radius: 0.625rem;      
+
+      position: fixed;
+      bottom:10px;
+      right:10px;
       
       box-shadow: 0.125rem #d1d1d1 ;
 
@@ -108,7 +111,7 @@ export const Container = styled.div`
         height: 3.125rem;
         width: 16.4375rem;
         border: none;
-        border-radius: 0.625rem; 
+        border-radius: 0.625rem;  
         
         box-shadow: 0.125rem #d1d1d1 ;
 

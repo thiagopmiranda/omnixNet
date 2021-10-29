@@ -1,29 +1,49 @@
+import React, { useCallback, useState } from "react";
 import { useHistory } from "react-router-dom";
-import { Container } from './styles'
+import { Container } from './styles';
+import Input from '../../components/Input';
 
-function Cep() {  
-  const history = useHistory();
+interface Cep {
+  cep: string;  
+}
 
-  function handleClick() {
-    history.push("/landingpage");
-  }  
+const Cep: React.FC = () => {
+  const [cep, setCep] = useState<Cep>({} as Cep);
 
-  return (
-    
+  const handleChange = useCallback(
+    (e: React.FormEvent<HTMLInputElement>) => {
+      setCep({
+        ...cep,
+        [e.currentTarget.name]: e.currentTarget.value,
+      });
+    },
+    [cep]
+  ); 
+
+  
+  const history = useHistory(); 
+  
+  function handleClick() {    
+    history.push("/landingpage");    
+  }
+  
+  return (    
     <Container>
-      <div>
+      <div className="container">
         <h2>Olá,<br/><strong>Bem-vindo(a)!</strong></h2>
         <p>Por favor, insira seu CEP abaixo para continuarmos.</p>
       </div>      
-      <div className="input">
-        <label>CEP:
-          <input name="CEP" id="CEP" required pattern="\d{5}-\d{3}"/>
-        </label>
-        <button type="button" onClick={handleClick}>Ver Planos Disponíveis</button>
+      <div>        
+          <Input
+            name="cep"
+            mask="cep"
+            onChange={handleChange}
+            placeholder="99999-999"
+          />                  
+        <button className="button" onClick={handleClick} >Ver Planos Disponíveis</button>
       </div>        
-    </Container>
-    
-  )
+    </Container>    
+  )  
 }
 
 export default Cep;
