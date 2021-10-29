@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { useHistory } from 'react-router-dom';
 import { Container } from './styles';
 
 import placeImg from '../../assets/place.svg'
@@ -10,7 +11,13 @@ import playImg from '../../assets/play.svg'
 import logoImg from '../../assets/logo.svg'
 
 
+
 function LandingPage() {  
+  const history = useHistory();
+
+  function handleClickBack() {
+    history.push("/");
+  } 
 
   return (
     <Container>
@@ -19,7 +26,7 @@ function LandingPage() {
           <h2>Ofertas para:</h2>                  
           <p><img src={placeImg} alt="Localidade" /> Av. Major Sylvio Magalhães Padilha, São Paulo, SP.</p>
         </div>
-        <button>Ops, errei meu CEP!</button>        
+        <button type="button" onClick={handleClickBack}>Ops, errei meu CEP!</button>        
       </section>
       <div className="divider-1"></div>
 
