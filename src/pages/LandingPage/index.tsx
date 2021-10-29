@@ -14,7 +14,7 @@ function LandingPage() {
 
   return (
     <Container>
-      <section className="offer-by-adrres">
+      <section className="offer-by-address">
         <div>
           <h2>Ofertas para:</h2>                  
           <p><img src={placeImg} alt="Localidade" /> Av. Major Sylvio Magalhães Padilha, São Paulo, SP.</p>
@@ -22,9 +22,9 @@ function LandingPage() {
         <button>Ops, errei meu CEP!</button>        
       </section>
       <div className="divider-1"></div>
-      <section className="sign-it">
-                
-        <div>
+
+      <section className="sign-it">                
+        <div className="sign-it-plans">
           <h2>Assine <span>Omni<strong>NET</strong></span>
           , a melhor internet para você!</h2>        
         </div>

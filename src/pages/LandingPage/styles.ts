@@ -13,7 +13,7 @@ export const Container = styled.div`
     justify-items: center;    
   }
 
-  section.offer-by-adrres {
+  section.offer-by-address {
     margin-top: 4rem;
 
     h2 {
@@ -46,69 +46,95 @@ export const Container = styled.div`
 
   section.sign-it {
     margin-top: 5rem;
-    margin-bottom: 5rem;    
-  }
+    margin-bottom: 5rem; 
 
-  div.cards-offer {
-    @media (min-width: 1200px) {
-      display: flex;
-      justify-content: space-between;
-      padding: 0 1.5rem;
-      width: 100%;  
-    }   
-  }
-
-  div.card {
-    display: grid;
-    justify-items: center;
-    grid-column-gap: 1rem;   
-    grid-row-gap: 1rem;
-    grid-template-columns: repeat(auto-fit, minmanx(250px, 1fr));
-    background: var(--text-body);
-    color: var(--text-title);
-    max-width: 20.4375rem;    
-    margin-top: 2rem;
-    border: none;
-    border-radius: 0.625rem;
-    padding: 1.5rem 2rem 2rem 2rem; 
-
-    h2 {   
-      font-size: var(--title-size);       
-      color: var(--pink);
-    }
-
-    h2 span {
-      font-size: 1rem;      
-    }
-
-    p {
-      margin-bottom: 2rem;
-    }
-
-    p strong {
-      font-size: 1.125rem;
-      padding-left: 0.5rem;
-    }
-
-    button {
-      background: var(--pink);
-      color: var(--text-body);
-      font-size: var(--label-size);
-      font-weight: 700;
-      height: 3.125rem;
-      width: 16.4375rem;
-      border: none;
-      border-radius: 0.625rem; 
-      
-      box-shadow: 0.125rem #d1d1d1 ;
-
-      transition: filter 0.2s;
-
-      &:hover {
-        filter: brightness(0.9);
+    div.sign-it-plans {
+      h2 {
+      font-size: var(--title-size);
+      font-weight: 400;
+      display: block;
+      justify-items: center;
+      max-width: 20.4375rem;
+      margin: 0 1.5rem 2rem;
       }
-    }      
+
+      h2 span {
+        font-weight: 500;
+      }
+
+      h2 span strong {
+        color: var(--pink);
+        font-weight: 700;
+      }    
+    }
+
+    div.card {
+      display: grid;
+      justify-items: center;
+      grid-column-gap: 1rem;   
+      grid-row-gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmanx(250px, 1fr));
+      background: var(--text-body);
+      color: var(--text-title);
+      max-width: 20.4375rem;    
+      margin-top: 2rem;
+      border: none;
+      border-radius: 0.625rem;
+      padding: 1.5rem 2rem 2rem 2rem; 
+
+      h2 {   
+        font-size: var(--title-size);      
+        color: var(--pink);
+
+        strong {
+          font-size: var(--label-size); 
+        }
+      }
+
+      p {
+        margin-bottom: 2rem;
+      }
+
+      p strong {
+        font-size: 1.125rem;
+        padding-left: 0.5rem;
+      }
+
+      button {
+        background: var(--pink);
+        color: var(--text-body);
+        font-size: var(--label-size);
+        font-weight: 700;
+        height: 3.125rem;
+        width: 16.4375rem;
+        border: none;
+        border-radius: 0.625rem; 
+        
+        box-shadow: 0.125rem #d1d1d1 ;
+
+        transition: filter 0.2s;
+
+        &:hover {
+          filter: brightness(0.9);
+        }
+      }      
+    }
+
+    div.cards-offer {
+      @media (min-width: 1200px) {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1.5rem;
+        width: 100%;  
+      }   
+    }
   }
+
+
+
+  
+
+  
 
   div.divider-1 {
       height: 1px;

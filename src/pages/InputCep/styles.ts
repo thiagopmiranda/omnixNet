@@ -48,7 +48,7 @@ export const Container = styled.form`
     height: 2.75rem;
     width: 12.375rem;
     margin-left: 5.4rem;
-    margin-bottom: 19.1875rem;
+    margin-bottom: 30.6rem;
 
     box-shadow: 0.125rem #d1d1d1 ;
 

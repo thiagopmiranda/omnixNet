@@ -1,6 +1,12 @@
+import { useHistory } from "react-router-dom";
 import { Container } from './styles'
 
 function Cep() {  
+  const history = useHistory();
+
+  function handleClick() {
+    history.push("/landingpage");
+  }  
 
   return (
     
@@ -13,7 +19,7 @@ function Cep() {
         <label>CEP:
           <input name="CEP" id="CEP" required pattern="\d{5}-\d{3}"/>
         </label>
-        <button>Ver Planos Disponíveis</button>
+        <button type="button" onClick={handleClick}>Ver Planos Disponíveis</button>
       </div>        
     </Container>
     
